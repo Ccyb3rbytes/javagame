@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Point Battle</title>
+  <style>
+    /* Add some basic styling */
+    body {
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .player {
+      width: 40%;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player" id="player1">
+    <h2>Player 1</h2>
+    <p>Points: <span id="player1-points">1000</span></p>
+    <button id="player1-button">Hit!</button>
+  </div>
+
+  <div class="player" id="player2">
+    <h2>Player 2</h2>
+    <p>Points: <span id="player2-points">1000</span></p>
+    <button id="player2-button">Hit!</button>
+  </div>
+
+  <script src="game.js"></script> </body>
+</html>
