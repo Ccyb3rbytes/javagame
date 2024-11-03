@@ -16,20 +16,19 @@ const player2Button = document.getElementById('player2-button');
 
 // The event listener waits for player1button to be triggered by the player1Button //
 // generaterandompoints is then called to get a random number of points to lose //
-
-//this function  ends up generating the points parameter below
+//this function  ends up generating the points parameter below //
 function generateRandomPoints() {
     return Math.floor(Math.random() * 100) + 1;
 }
 
-//
-// this function uses the if 
+
+// this function uses the if statment //
 function updatePoints(playerId, points) {
     // if playerID is equal to 1 //
   if (playerId === 1) {
     // The operator subtracts points from player1points leaving the remaning amount //
     player1Points -= points;
-    // the remaining amount is updated in the html with the operator making player1point then equal player1pointdisplay.textcontent
+    // the remaining amount is updated in the html with the operator making player1point then equal player1pointdisplay.textcontent//
     player1PointsDisplay.textContent = player1Points;
     // and if its not doing That for player1 its doing this for player2 which is the same thing//
   } else {
@@ -44,21 +43,21 @@ function switchPlayer() {
 }
 
 //this defines what the button does when clicked//
-//this function listens for the button to be clicked which triggers the if statment;;
+//this function listens for the button to be clicked which triggers the if statment //
 player1Button.addEventListener('click', () => {
     //  if currentplayer is player 1//
   if (currentPlayer === 1) {
 // generatedrandompoints() is defined as lost points by const //
     const lostPoints = generateRandomPoints();
 //update points using the parameters for player, and lostpoints)//
-//the value 1 and lostpoints is passed as an argument to the functions playerID and points parameter 
+//the value 1 and lostpoints is passed as an argument to the functions playerID and points parameter //
     updatePoints(1, lostPoints);
 //complete first player move on to second//
     switchPlayer();
   }
 });
 
-//so basically when the eventlistener picks up that the player one button is clicked 
+//so basically when the eventlistener picks up that the player one button is clicked //
 //then it waits for player2button to be activated//
 player2Button.addEventListener('click', () => {
   if (currentPlayer === 2) {
